@@ -94,6 +94,7 @@ public final class Loader {
                 LOGGER.trace("Trying to find [{}] using context class loader {}.", resource, classLoader);
                 final URL url = classLoader.getResource(resource);
                 if (url != null) {
+                    LOGGER.debug("Found {} at {} using context class loader {}.", resource, url, classLoader);
                     return url;
                 }
             }
